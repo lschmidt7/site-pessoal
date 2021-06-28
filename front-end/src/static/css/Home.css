@@ -1,0 +1,26 @@
+.fluid-img {
+    background-size: cover;
+}
+
+#home {
+    overflow: hidden;
+}
+
+#part-1 {
+    background-image: url('../img/fluid-img.jpg');
+    padding-block: 15%;
+    text-align: center;
+}
+
+#section-title {
+    margin-top: 2%;
+    text-align: center;
+}
+
+#part-2 {
+    margin-top: 2%;
+}
+
+#part-3 {
+    margin-top: 2%;
+}
