@@ -1,0 +1,16 @@
+
+#sobre {
+
+}
+
+#sobre h1 {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.recuo {
+    text-indent: 3em;
+}

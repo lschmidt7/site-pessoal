@@ -1,6 +1,6 @@
 import '../static/css/Home.css'
 import React, { Component } from 'react'
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col, Container, Tabs, Tab } from 'react-bootstrap'
 import CardCurso from '../components/CardCurso'
 import CardProjeto from '../components/CardProjeto'
 import axios from 'axios'
@@ -87,6 +87,22 @@ class Home extends Component {
 							<h1>Formação</h1>
 						</Col>
 					</Row>
+					<Row>
+						<ul>
+							<li>2012 - Tecnico em Informática</li>
+							<ul>
+								<li>Instituto Federal de Ciência e Tecnologia Farroupilha (IFFar) - Campus Santo Augusto/RS</li>
+							</ul>
+							<li>2017 - Bacharelado em Ciência da Computação</li>
+							<ul>
+								<li>Universidade Federal de Santa Maria (UFSM)</li>
+							</ul>
+							<li>2020 - Mestrado em Ciência da Computação</li>
+							<ul>
+								<li>Universidade Federal de Santa Maria (UFSM)</li>
+							</ul>
+						</ul>
+					</Row>
 				</Container>
 
 
@@ -97,6 +113,22 @@ class Home extends Component {
 						<Col>
 							<h1>Experiências</h1>
 						</Col>
+					</Row>
+					<Row>
+						<ul>
+							<li>2017 - Estágio</li>
+							<ul>
+								<li>SIS-ASTROS 2020</li>
+							</ul>
+							<li>2019/2021 - Docente</li>
+							<ul>
+								<li>Instituto Federal Farroupilha - Campus Panambi</li>
+							</ul>
+							<li>2021 - Analista de Sistemas</li>
+							<ul>
+								<li>NBRtec - Indústria de Equipamentos Elétricos Ltda</li>
+							</ul>
+						</ul>
 					</Row>
 				</Container>
 			</div>

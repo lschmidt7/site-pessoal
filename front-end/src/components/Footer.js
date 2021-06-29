@@ -1,13 +1,19 @@
-
+import '../static/css/Footer.css'
 import { Component } from "react";
-import {Navbar} from 'react-bootstrap'
+import {Navbar,Container,Row,Col} from 'react-bootstrap'
 
 class Footer extends Component {
 
     render() {
         return (
-            <Navbar bg="dark" variant="dark" sticky>
-                fadsfads
+            <Navbar bg="dark" variant="dark" id="footer">
+                <Container className="justify-content-center">
+                    <Row>
+                        <Col>
+                            leonardoschmabreu@gmail.com
+                        </Col>
+                    </Row>
+                </Container>
             </Navbar>
         )
     }
