@@ -3,6 +3,11 @@
     height: auto;
 }
 
+.card-projeto:hover {
+    background-color: rgb(185, 185, 185);
+    cursor: pointer;
+}
+
 .card-projeto p {
     text-align: justify;
 }

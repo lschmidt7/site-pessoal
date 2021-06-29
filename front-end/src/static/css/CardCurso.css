@@ -4,9 +4,6 @@
 }
 
 .card-curso:hover {
-    background-color: rgb(121, 121, 121);
-    color: white;
-    cursor: pointer;
 }
 
 .card-curso p {

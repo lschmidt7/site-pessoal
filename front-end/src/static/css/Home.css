@@ -8,6 +8,7 @@
 
 #part-1 {
     background-image: url('../img/fluid-img.jpg');
+    background-size: cover;
     padding-block: 15%;
     text-align: center;
 }

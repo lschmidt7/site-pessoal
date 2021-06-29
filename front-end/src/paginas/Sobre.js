@@ -1,3 +1,4 @@
+import '../static/css/Geral.css'
 import '../static/css/Sobre.css'
 import React, {Component} from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
@@ -5,7 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 class Sobre extends Component {
     render() {
         return (
-            <Container id="sobre">
+            <Container id="sobre" className="body">
                 <Row>
                     <Col>
                         <h1>Sobre</h1>

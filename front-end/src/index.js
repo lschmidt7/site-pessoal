@@ -6,8 +6,10 @@ import Home from './paginas/Home'
 import Sobre from './paginas/Sobre';
 import Cursos from './paginas/Cursos';
 import CadastroCurso from './paginas/CadastroCurso';
+import Login from './paginas/Login'
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './static/css/index.css'
 
 
 
@@ -21,6 +23,7 @@ ReactDOM.render(
 			<Route path="/cursos" component={Cursos} />
 			<Route path="/sobre" component={Sobre} />
 			<Route path="/cadastro-curso" component={CadastroCurso} />
+			<Route path="/login" component={Login} />
 		</Switch>
 		<Footer />
 	</BrowserRouter>,
