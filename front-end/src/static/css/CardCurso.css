@@ -6,6 +6,10 @@
 .card-curso:hover {
 }
 
+.card-curso-title {
+    text-align: center;
+}
+
 .card-curso p {
     text-align: justify;
 }

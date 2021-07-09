@@ -21,6 +21,9 @@ class Header extends Component {
                     <Nav.Link href="/cursos">
                         Cursos
                     </Nav.Link>
+                    <Nav.Link href="/cursos">
+                        Projetos
+                    </Nav.Link>
                     <Nav.Link href="/sobre">
                         Sobre
                     </Nav.Link>

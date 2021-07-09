@@ -10,7 +10,7 @@ class Login extends Component {
             <div id="login">
             <Container>
                 <Row className="justify-content-center justify">
-                    <Col xs={4}>
+                    <Col xs={10} sm={8} md={6} lg={4} xl={4}>
                         <Form>
                             <FormGroup>
                                 <Form.Label>Email</Form.Label>

@@ -1,6 +1,6 @@
 import '../static/css/Home.css'
 import React, { Component } from 'react'
-import { Row, Col, Container, Tabs, Tab } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import CardCurso from '../components/CardCurso'
 import CardProjeto from '../components/CardProjeto'
 import axios from 'axios'
@@ -11,23 +11,28 @@ class Home extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			titulo: '',
-			descricao: ''
+			cursos: []
 		};
-		this.getCursos = this.getCursos.bind(this);
 		this.getCursos();
 	}
 
-	getCursos(){
-		var self = this;
-		axios.get('http://localhost:4000/cursos').then(function (res) {
-			self.setState({
-				titulo: res['data'][0].titulo,
-				descricao: res['data'][0].descricao
-			})
+	async getCursos(){
+		let cursos = [];
+		await axios.get('http://localhost:4000/cursos').then(function (res) {
+			cursos = res['data']
 		});
+		let ec = []
+		for (let i = 0; i < cursos.length; i++) {
+			ec.push(
+				<Col key={"curso_"+i}>
+					<CardCurso dados={cursos[i]}></CardCurso>
+				</Col>
+			)
+		}
+		this.setState({
+			cursos: ec
+		})
 	}
-
 	render() {
 		return (
 			<div id="home">
@@ -44,6 +49,8 @@ class Home extends Component {
 				</Row>
 				</Container>
 
+				
+
 				{/* SEÇÃO DE CURSOS */}
 				<Container>
 					<Row id="section-title">
@@ -52,15 +59,7 @@ class Home extends Component {
 						</Col>
 					</Row>
 					<Row id="part-2">
-						<Col>
-							<CardCurso nome={this.state.titulo} descricao={this.state.descricao}></CardCurso>
-						</Col>
-						<Col>
-							<CardCurso nome="Estrutura de dados em Linguagem C"></CardCurso>
-						</Col>
-						<Col>
-							<CardCurso nome="Desenvolva seus prórpios Shaders na Unity"></CardCurso>
-						</Col>
+						{this.state.cursos}
 					</Row>
 				</Container>
 
@@ -73,9 +72,15 @@ class Home extends Component {
 						</Col>
 					</Row>
 					<Row id="part-3">
-						<CardProjeto nome="Terrain LOD"></CardProjeto>
-						<CardProjeto nome="Machine Learning Drivind"></CardProjeto>
-						<CardProjeto nome="Terrain LOD"></CardProjeto>
+						<Col lg={4} md={4}>
+							<CardProjeto nome="projeto_1" extension="png"></CardProjeto>
+						</Col>
+						<Col lg={4} md={4}>
+							<CardProjeto nome="projeto_2" extension="png"></CardProjeto>
+						</Col>
+						<Col lg={4} md={4}>
+							<CardProjeto nome="projeto_3" extension="png"></CardProjeto>
+						</Col>
 					</Row>
 				</Container>
 
@@ -89,7 +94,7 @@ class Home extends Component {
 					</Row>
 					<Row>
 						<ul>
-							<li>2012 - Tecnico em Informática</li>
+							<li>2012 - Técnico em Informática</li>
 							<ul>
 								<li>Instituto Federal de Ciência e Tecnologia Farroupilha (IFFar) - Campus Santo Augusto/RS</li>
 							</ul>

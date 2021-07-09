@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './paginas/Home'
 import Sobre from './paginas/Sobre';
 import Cursos from './paginas/Cursos';
+import Curso from './paginas/Curso';
 import CadastroCurso from './paginas/CadastroCurso';
 import Login from './paginas/Login'
 import reportWebVitals from './reportWebVitals';
@@ -21,6 +22,7 @@ ReactDOM.render(
 		<Switch>
 			<Route path="/" exact={true} component={Home} />
 			<Route path="/cursos" component={Cursos} />
+			<Route path="/curso/:id" component={Curso} />
 			<Route path="/sobre" component={Sobre} />
 			<Route path="/cadastro-curso" component={CadastroCurso} />
 			<Route path="/login" component={Login} />
